@@ -11,6 +11,7 @@ class CountriesTableSeeder extends Seeder
      */
     public function run(): void
     {
+        //Command: php -d memory_limit=350M artisan countries:seeder
         $this->call('Altwaireb\Countries\Database\Seeders\BaseCountriesSeeder');
     }
 }

@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('table_calendar_user', function (Blueprint $table) {
             $table->foreignId('calendar_id')->constrained()->cascadeOnDelete()->cascadeOnUpdate();
             $table->foreignId('user_id')->constrained()->cascadeOnDelete()->cascadeOnUpdate();
-            $table->primary(['calendar_id', 'user_id']);
+            //$table->primary(['calendar_id', 'user_id']);
             $table->timestamps();
         });
     }

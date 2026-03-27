@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('departaments', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('acronym', 25)->unique()->index();
+            $table->string('name')->unique()->index();
             $table->timestamps();
         });
     }
